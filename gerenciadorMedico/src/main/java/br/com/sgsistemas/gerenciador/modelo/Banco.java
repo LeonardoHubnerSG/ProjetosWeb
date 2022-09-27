@@ -1,5 +1,7 @@
-package br.com.sgsistemas.gerenciador.servlet;
+package br.com.sgsistemas.gerenciador.modelo;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +10,10 @@ public class Banco {
 	private static List<Medico> medicos = new ArrayList<>();
 	
 	static {
-		Medico medico1 = new Medico("Leonardo Hubner", "22/04/1995", "123456");
-		Medico medico2 = new Medico("Luzia Rodrigues Hubner", "11/12/1969", "6543210789");
+		LocalDate ld1 = LocalDate.parse("22/04/1995", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		LocalDate ld2 = LocalDate.parse("11/12/1970", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		Medico medico1 = new Medico("Leonardo Hubner", ld1, "123456");
+		Medico medico2 = new Medico("Luzia Rodrigues Hubner", ld2, "6543210789");
 		Banco.adicionaMedico(medico1);
 		Banco.adicionaMedico(medico2);
 	}

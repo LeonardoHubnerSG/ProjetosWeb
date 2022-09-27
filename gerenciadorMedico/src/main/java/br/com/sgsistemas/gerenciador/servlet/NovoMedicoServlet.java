@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.sgsistemas.gerenciador.modelo.Banco;
+import br.com.sgsistemas.gerenciador.modelo.Medico;
+
 @WebServlet("/novoMedico")
 public class NovoMedicoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -20,14 +23,10 @@ public class NovoMedicoServlet extends HttpServlet {
 		String crm = request.getParameter("crm");
 		String paramDataNasc = request.getParameter("dataNascMedico");
 		
-		//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		
-		//LocalDate dataNasc = LocalDate.parse(paramDataNasc,formatter);
-		String dataNasc = paramDataNasc;
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate dataNascMedico = LocalDate.parse(paramDataNasc, fmt);
 
-		//String data = String.valueOf(dataNasc.minusDays(1));
-
-		Medico medico = new Medico(nomeMedico, dataNasc, crm);
+		Medico medico = new Medico(nomeMedico, dataNascMedico, crm);
 		Banco.adicionaMedico(medico);
 		
 		request.setAttribute("medico", medico.getNome());

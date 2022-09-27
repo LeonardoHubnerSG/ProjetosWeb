@@ -1,14 +1,15 @@
-package br.com.sgsistemas.gerenciador.servlet;
+package br.com.sgsistemas.gerenciador.modelo;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Medico {
 	private Integer id;
 	private String nome;
-	private String dataNascimento;
+	private LocalDate dataNascimento;
 	private String crm;
 	
-	public Medico(String nome, String dataNascimento, String crm) {
+	public Medico(String nome, LocalDate dataNascimento, String crm) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.crm = crm;
@@ -31,11 +32,14 @@ public class Medico {
 	}
 
 	public String getDataNascimento() {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		String dataNascimento = this.dataNascimento.format(formatter);
 		return dataNascimento;
 	}
 
 	public void setDataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		this.dataNascimento = LocalDate.parse(dataNascimento, fmt);
 	}
 
 	public String getCrm() {
