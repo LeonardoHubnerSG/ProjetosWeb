@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.sgsistemas.gerenciador.modelo.Banco;
+import br.com.sgsistemas.gerenciador.modelo.Medico;
+
 @WebServlet("/filtraMedicos")
 public class FiltraMedicosServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

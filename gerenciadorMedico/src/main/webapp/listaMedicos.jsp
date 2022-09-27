@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.util.List, br.com.sgsistemas.gerenciador.servlet.Medico"%>
+<%@ page import="java.util.List,br.com.sgsistemas.gerenciador.modelo.Medico"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <c:url value="/formNovoMedico.jsp" var="linkServletNovoMedico" />
@@ -39,13 +39,15 @@ tr:nth-child(even) {
 	
 	<fieldset>
 		<legend>Filtro</legend>
-		<p>
-			<form action='${linkServletFiltraMedicos}'>
-				Nome: <input type='text' name='nomeMedico'/>
-				<input type='submit' value='Buscar'>
-			</form>
-		</p>
+
+		<form action='${linkServletFiltraMedicos}'>
+			Nome: <input type='text' name='nomeMedico'/>
+			<input type='submit' value='Buscar'>
+		</form>
+
 	</fieldset>
+	
+	<br/>
 	
 	<table style='margin:1px'>
 		<tr>
