@@ -1,0 +1,39 @@
+28-Sep-2022 10:21:07.232 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.65
+28-Sep-2022 10:21:07.233 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 14 2022 12:28:53 UTC
+28-Sep-2022 10:21:07.233 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.65.0
+28-Sep-2022 10:21:07.233 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+28-Sep-2022 10:21:07.233 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.0-48-generic
+28-Sep-2022 10:21:07.233 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Sep-2022 10:21:07.233 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-1.8.0-amazon-corretto/jre
+28-Sep-2022 10:21:07.233 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_342-b07
+28-Sep-2022 10:21:07.233 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Amazon.com Inc.
+28-Sep-2022 10:21:07.233 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65
+28-Sep-2022 10:21:07.234 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65
+28-Sep-2022 10:21:07.235 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/conf/logging.properties
+28-Sep-2022 10:21:07.235 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Sep-2022 10:21:07.235 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Sep-2022 10:21:07.235 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Sep-2022 10:21:07.236 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Sep-2022 10:21:07.236 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Sep-2022 10:21:07.236 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65
+28-Sep-2022 10:21:07.236 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65
+28-Sep-2022 10:21:07.236 INFORMAÇÕES [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/temp
+28-Sep-2022 10:21:07.237 INFORMAÇÕES [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+28-Sep-2022 10:21:07.419 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 10:21:07.430 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.load Server initialization in [303] milliseconds
+28-Sep-2022 10:21:07.447 INFORMAÇÕES [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Sep-2022 10:21:07.447 INFORMAÇÕES [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.65]
+28-Sep-2022 10:21:07.459 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/gerenciadorMedico.war]
+28-Sep-2022 10:21:07.699 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/gerenciadorMedico.war] has finished in [239] ms
+28-Sep-2022 10:21:07.699 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/ROOT]
+28-Sep-2022 10:21:07.707 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/ROOT] has finished in [8] ms
+28-Sep-2022 10:21:07.707 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/docs]
+28-Sep-2022 10:21:07.715 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/docs] has finished in [8] ms
+28-Sep-2022 10:21:07.715 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/manager]
+28-Sep-2022 10:21:07.731 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/manager] has finished in [16] ms
+28-Sep-2022 10:21:07.732 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/examples]
+28-Sep-2022 10:21:07.813 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/examples] has finished in [81] ms
+28-Sep-2022 10:21:07.813 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/host-manager]
+28-Sep-2022 10:21:07.822 INFORMAÇÕES [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/sg-cloud/ProjetosWeb/apache-tomcat-9.0.65/webapps/host-manager] has finished in [9] ms
+28-Sep-2022 10:21:07.824 INFORMAÇÕES [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Sep-2022 10:21:07.831 INFORMAÇÕES [main] org.apache.catalina.startup.Catalina.start Server startup in [400] milliseconds

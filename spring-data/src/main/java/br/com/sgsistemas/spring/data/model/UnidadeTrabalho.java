@@ -1,15 +1,18 @@
 package br.com.sgsistemas.spring.data.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "unidades_trabalho")
+@Table(name = "unidade_trabalho")
 public class UnidadeTrabalho {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String descricao;
     private String endereco;
+    @ManyToMany(mappedBy = "unidadeTrabalhos", fetch = FetchType.EAGER)
+    private List<Funcionario> funcionarios;
 
     public Integer getId() {
         return id;
