@@ -17,8 +17,6 @@ public class UnidadeTrabalhoService {
 
     public void inicial(Scanner scanner) {
 
-        int action;
-
         while (system) {
 
             System.out.println("Qual ação deseja realizar com as unidades de trabalho?");
@@ -30,7 +28,7 @@ public class UnidadeTrabalhoService {
             System.out.println("5 - Deletar todas");
 
             //scanner = new Scanner(System.in);
-            action = scanner.nextInt();
+            int action = scanner.nextInt();
             switch (action) {
                 case 0:{
                     system = false;
@@ -103,7 +101,6 @@ public class UnidadeTrabalhoService {
         String descricao = scanner.next();
         System.out.println("Endereco da unidade de trabalho:");
         String endereco = scanner.next();
-
 
         UnidadeTrabalho unidadeTrabalho = new UnidadeTrabalho();
         unidadeTrabalho.setDescricao(descricao);

@@ -1,7 +1,12 @@
 package br.com.sgsistemas.spring.data.service;
 
 import br.com.sgsistemas.spring.data.model.Cargo;
+import br.com.sgsistemas.spring.data.model.Funcionario;
 import br.com.sgsistemas.spring.data.repository.CargoRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
@@ -44,7 +49,7 @@ public class CargoService {
                     atualizar(scanner);
                     break;
                 }case 3: {
-                    visualizar();
+                    visualizar(scanner);
                     break;
                 }
                 case 4: {
@@ -74,9 +79,22 @@ public class CargoService {
         System.out.println("Cargo de id " + id + " deletado!");
     }
 
-    private void visualizar() {
+    private void visualizar(Scanner scanner) {
+        System.out.println("Qual pagina voce deseja visualizar?");
+        Integer page = scanner.nextInt();
+
+        Pageable pageable = PageRequest.of(page, 1000, Sort.by(Sort.Direction.ASC,"descricao" ));
+        Page<Cargo> cargos = cargoRepository.findAll(pageable);
+
+        System.out.println(cargos);
+        System.out.println("Pagina atual: " + cargos.getNumber());
+        System.out.println("Total Elementos: " + cargos.getTotalElements());
+        cargos.forEach(cargo -> System.out.println(cargo));
+
+        /*
         Iterable<Cargo> cargos = cargoRepository.findAll();
         cargos.forEach(cargo -> System.out.println(cargo));
+         */
     }
 
     private void atualizar(Scanner scanner) {
