@@ -7,6 +7,7 @@ import lombok.Data;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Data
 public class PessoaDto {
     private String nome;
     private String equipe;
@@ -17,7 +18,8 @@ public class PessoaDto {
 		this.equipe = pessoa.getEquipe().getNome();
 		this.cargo = pessoa.getCargo().name();
 	}
-    
+
+    /*
     public String getNome() {
 		return nome;
 	}
@@ -29,6 +31,7 @@ public class PessoaDto {
 	public String getCargo() {
 		return this.cargo;
 	}
+    */
 
 	public static List<PessoaDto> converter(List<Pessoa> pessoas) {
         return pessoas.stream().map(PessoaDto::new).collect(Collectors.toList());

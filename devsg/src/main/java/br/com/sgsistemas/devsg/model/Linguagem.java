@@ -16,6 +16,13 @@ public class Linguagem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
-    @ManyToMany
+    @ManyToMany(mappedBy = "linguagens")
     private List<Equipe> equipes;
+
+    public Linguagem(String nome) {
+        this.nome = nome;
+    }
+
+    public Linguagem() {
+    }
 }

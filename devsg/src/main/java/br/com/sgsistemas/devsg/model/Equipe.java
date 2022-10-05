@@ -8,19 +8,30 @@ import java.util.List;
 @Entity
 //@AllArgsConstructor
 //@NoArgsConstructor
-@Getter
-@Setter
+//@Getter
+//@Setter
 @Data
 public class Equipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
-    @OneToMany
+    @OneToMany(mappedBy = "equipe")
     private List<Pessoa> pessoas;
-    @ManyToMany(mappedBy = "equipes")
+    @OneToMany(mappedBy = "equipe")
+    private List<Produto> produtos;
+    @ManyToMany
     private List<Linguagem> linguagens;
-    
+
+    public Equipe(String nome, List<Linguagem> linguagens) {
+        this.nome = nome;
+        this.linguagens = linguagens;
+    }
+
+    public Equipe() {
+    }
+
+    /*
 	public Integer getId() {
 		return id;
 	}
@@ -33,7 +44,6 @@ public class Equipe {
 	public List<Linguagem> getLinguagens() {
 		return linguagens;
 	}
-    
-    
+	*/
     
 }

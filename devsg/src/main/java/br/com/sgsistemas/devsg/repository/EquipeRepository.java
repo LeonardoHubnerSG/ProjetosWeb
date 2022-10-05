@@ -8,7 +8,9 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface EquipeRepository extends JpaRepository<Equipe, Integer> {
 
-	Equipe findByNome(String nomeEquipe);
+	List<Equipe> findByNome(String nomeEquipe);
 }
