@@ -8,10 +8,5 @@ import java.util.List;
 public class LinguagemDto {
     private String nome;
     private List<EquipeDto> equipes;
-    /*
-    private Integer id;
-    private String nome;
-    @ManyToMany
-    private List<Equipe> equipes;
-     */
+
 }

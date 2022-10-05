@@ -8,8 +8,8 @@ import java.util.List;
 @Entity
 //@AllArgsConstructor
 //@NoArgsConstructor
-//@Getter
-//@Setter
+@Getter
+@Setter
 @Data
 public class Equipe {
     @Id
@@ -20,4 +20,20 @@ public class Equipe {
     private List<Pessoa> pessoas;
     @ManyToMany(mappedBy = "equipes")
     private List<Linguagem> linguagens;
+    
+	public Integer getId() {
+		return id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public List<Pessoa> getPessoas() {
+		return pessoas;
+	}
+	public List<Linguagem> getLinguagens() {
+		return linguagens;
+	}
+    
+    
+    
 }
