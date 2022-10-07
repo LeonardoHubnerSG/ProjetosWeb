@@ -5,6 +5,8 @@ import br.com.sgsistemas.devsg.controller.form.LinguagemAtualizaForm;
 import br.com.sgsistemas.devsg.controller.form.LinguagemForm;
 import br.com.sgsistemas.devsg.model.Linguagem;
 import br.com.sgsistemas.devsg.repository.LinguagemRepository;
+import br.com.sgsistemas.devsg.service.LinguagemService;
+import com.sun.jndi.toolkit.url.Uri;
 import lombok.Data;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,27 +22,19 @@ import java.util.Optional;
 @RequestMapping("/linguagens")
 @Data
 public class LinguagemController {
+    private final LinguagemService linguagemService;
+
     private final LinguagemRepository linguagemRepository;
 
     @GetMapping
     public List<LinguagemDto> listar(String nome){
-        List<Linguagem> linguagens = new ArrayList<>();
-        if (nome == null){
-            linguagens = linguagemRepository.findAll();
-        }else{
-            linguagens = linguagemRepository.findByNome(nome);
-        }
-        return LinguagemDto.converter(linguagens);
+        return linguagemService.listar(nome);
     }
 
     @PostMapping
     @Transactional
     public ResponseEntity<LinguagemDto> cadastrar(@RequestBody @Valid LinguagemForm form, UriComponentsBuilder uriBuilder) {
-        Linguagem linguagem = form.converter();
-        linguagemRepository.save(linguagem);
-
-        URI uri = uriBuilder.path("/linguagens/{id}").buildAndExpand(linguagem.getId()).toUri();
-        return ResponseEntity.created(uri).body(new LinguagemDto(linguagem));
+        return linguagemService.cadastrar(form, uriBuilder);
     }
 
     @PutMapping("/{id}")

@@ -1,6 +1,5 @@
 package br.com.sgsistemas.devsg.controller.form;
 
-
 import br.com.sgsistemas.devsg.model.Equipe;
 import br.com.sgsistemas.devsg.model.Linguagem;
 import br.com.sgsistemas.devsg.model.Pessoa;
