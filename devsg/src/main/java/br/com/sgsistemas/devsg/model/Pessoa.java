@@ -9,10 +9,11 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@Getter
+//@Setter
+@Data
 public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,13 +23,24 @@ public class Pessoa {
     private Cargo cargo = Cargo.SEM_CARGO;
     @ManyToOne
     private Equipe equipe;
-    
-	public Pessoa(String nome, String nomeCargo, Equipe equipe) {
-		this.nome = nome;
-		this.cargo = Cargo.valueOf(nomeCargo);
-		this.equipe = equipe;
-	}
-	
+
+    public Pessoa(String nome, String nomeCargo, Equipe equipe) {
+        this.nome = nome;
+        this.cargo = Cargo.valueOf(nomeCargo);
+        this.equipe = equipe;
+    }
+
+    public Pessoa() {
+
+    }
+
+    public void atualizaPessoa(String nome, String nomeCargo) {
+        this.nome = nome;
+        this.cargo = Cargo.valueOf(nomeCargo);
+    }
+
+	/*
+
 	
 	public Pessoa() {
 	}
@@ -73,7 +85,7 @@ public class Pessoa {
 		this.equipe = equipe;
 	}
 
-
+	*/
 	
     
 }
