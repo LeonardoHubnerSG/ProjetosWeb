@@ -24,4 +24,22 @@ public class CategoryService {
         Optional<Category> optionalCategory =  categoryRepository.findById(id);
         return optionalCategory.get();
     }
+
+    public Category insert(Category category){
+        return categoryRepository.save(category);
+    }
+
+    public void delete(Long id){
+        categoryRepository.deleteById(id);
+    }
+
+    public Category update(Long id, Category category){
+        Category entity = categoryRepository.getReferenceById(id);
+        updateData(entity, category);
+        return categoryRepository.save(entity);
+    }
+
+    private void updateData(Category entity, Category category) {
+        entity.setName(category.getName());
+    }
 }

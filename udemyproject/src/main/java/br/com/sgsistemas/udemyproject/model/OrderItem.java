@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -12,7 +13,8 @@ import java.util.Set;
 @Entity
 @Table(name = "tb_order_item")
 @Data
-public class OrderItem {
+public class OrderItem implements Serializable {
+    private static final long serialVersionUID = 1L;
     @EmbeddedId
     @JsonIgnore
     private OrderItemPK id = new OrderItemPK();
