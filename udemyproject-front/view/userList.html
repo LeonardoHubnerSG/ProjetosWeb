@@ -1,0 +1,22 @@
+<div class="jumbotron" ng-controller="udemyProjectCtrl">
+    <h3>{{app}}</h3>
+    <table  class="table table-striped">
+        <tr>
+            <th></th>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+        </tr>
+        <tr ng-repeat="user in users">
+            <td><input type="checkbox" ng-model="user.selected" ng-click="verifySelectedUsers(users)"/></td>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+        </tr>
+    </table>
+
+    <button class="btn btn-primary btn-block" ng-click="navigateToNewUser()">New User</button>
+    <button class="btn btn-danger btn-block" ng-click="deleteUsers(users)" ng-if="hasSelectedUser">Delete Users</button>
+</div> 
