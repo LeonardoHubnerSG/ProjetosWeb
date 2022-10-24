@@ -1,0 +1,10 @@
+<div class="jumbotron" ng-controller="udemyProjectCtrl">
+    <h3>{{app}}</h3>
+    <form name="userForm">
+        <input class="form-control" type="text" ng-model="user.name" name="name" placeholder="Nome" ng-required="true" ng-minlength="5"/>
+        <input class="form-control" type="text" ng-model="user.email" name="email" placeholder="E-mail" ng-required="true" ng-minlength="5"/>
+        <input class="form-control" type="text" ng-model="user.phone" name="phone" placeholder="Telefone" ng-required="true" ng-pattern="/^\d{4,5}-\d{4}$/"/>
+        <input class="form-control" type="text" ng-model="user.password" name="password" placeholder="Senha" ng-required="true" ng-minlength="5"/>
+        <button class="btn btn-primary btn-block" ng-click="saveUser(user)">Save User</button>
+    </form>
+</div>
